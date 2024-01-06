@@ -1,0 +1,251 @@
+1Q. what is react?
+ans. React is an open-source JavaScript library. React is used for building user Interfaces. React is a single-page application created by using reusable components.
+
+2Q.  what are the key features of react?
+ans. Virtual DOM, React Hooks, JavaScript XML, Declaration Syntax, Reusability, etc.
+
+3Q. what is DOM?
+ans. DOM stands for document object model. DOM is the programming interface of HTML documents and JavaSCript XML. When the browser renders, it creates an object-based model on HTML documents called DOM. We can manipulate or change various elements inside the HTML document.
+
+4Q. what is Virtual DOM?
+ans. Virtual DOM is a lightweight copy of real DOM. and when the user changes then only the virtual DOM is Updated. advantage of virtual DOM is not render whole components, it only renders the updated part, and react library(reconciliation) updates only this part in the real DOM.  
+
+5Q. what are React Components? what are the main elements of it?
+ans. it is a reusable building block of UI. The main elements are imports and exports.
+
+
+6Q. What is SPA(single page application)?
+ans. SPA is a web application in which only one web page and when we perform some operation, it is performed without referencing or loading the whole page.
+
+7Q. what is the role of JSX in react?
+ans. When we write the code in react, it is written in javascript JSX and the browser can only understand the javascript code so the react library changes the JSX code into javascript code, and that library is called babel.
+
+8Q. what is the Arrow function expression in JSX?
+ans. The arrow function is the combination of function and arrow, which first passes the parameter and then uses the arrow, the whole body written inside the curly bracket.
+
+9Q. what is the difference between React and Angular?
+ans. React is a JavaScript library whereas Angular is a complete framework. React uses a virtual DOM which makes it faster whereas Angular uses the real DOM.
+
+10Q. Whether React is a framework or a library? what is the difference?
+ans. react components are defined by the javaScript library but in the framework, components are defined by themselves.
+
+11Q. how does React provide Reusability and Composition?
+ans. Reusability: Once you create a component, you can reuse it in different parts of your application or even in multiple projects.
+Composition: Composition creates new and big components by a combination of existing small components, its advantage is, that changing to one small component will not impact other components.
+
+12Q.what is state, stateless, stateful, and state management terms?
+ans. state refers to the current data of the components. stateful or state management means when the user performs some action on UI, then react should able to update the data and render the update part. stateless means we do not use the state hook due to this reason values are not rendered or updated in the UI. 
+
+13Q. what are Props in JSX?
+ans. props are a way to pass the data from parents to child components.
+
+14Q. what is NPM? What is the role of the node_modules folder?
+ans. NPM(node package module) is used in React projects to handle all the dependencies and React library.
+
+15Q. what is the role of a public folder and src folder in React?
+ans. In the public folder, all static parts which are used in React are placed. all the components and source code are stored in the src folder.
+
+16Q. what are functions and returns inside React?
+ans. The function keyword is used to define the JavaScript function that represents react components. the function takes parameters as arguments and returns JSX code.
+
+
+17Q. What is the role of export default inside App.js?
+ans. export default is used to use the components in the required components by "import" the components.
+
+18Q. what is Babel?
+ans. Babel in React is used to transpile JSX syntax into regular javascript which the browser can understand.
+
+19Q. What is the role of Fragment in JSX?
+ans. When we write two children elements then we need to rap into a parent div but in some projects, it did not require any extra div at that time fragment(<frament></frament>,<>,/>) is used to replace the extra div.
+
+20Q. what is Spread Operator?
+ans. The spread operator(...) is used to expand or spread an array or object.
+
+
+const MyComponent = (props) => {
+      <div>
+      <p>{props.text}</p>
+       </div>
+                               };
+
+
+    <div>
+     <MyComponent {...myProps} />
+    </div>
+  
+21Q. what is Transpiler? what is the difference between a compiler and a Transpiler?
+ans. When converting one syntax of code into another syntax of code then this process is called a transpiling and that tool is called a Transpiler.exp=> Babel.
+compiler is used to convert high-level language into low-level language.
+
+22Q. What are the types of React components? What are functional Components?
+ans.There are two types of react Components: function components and class components.
+functional components are similar to JavaScript functions.
+
+23Q. what is Prop Drilling in React?
+ans. Prop drilling is the process of passing down props through multiple layers of components.
+
+ import React from 'react';
+
+// Grandchild component
+const Grandchild = (props) => {
+  return (
+    <div>
+      <p>{props.message}</p>
+    </div>
+  );
+};
+
+// Child component
+const Child = (props) => {
+  return (
+    <div>
+      <p>{props.message}</p>
+      <Grandchild message={props.message} />
+    </div>
+  );
+};
+
+// Parent component
+const Parent = (props) => {
+  return (
+    <div>
+      <p>{props.message}</p>
+      <Child message={props.message} />
+    </div>
+  );
+};
+
+// App component
+const App = () => {
+  const message = 'Props drilling example!';
+
+  return (
+    <div>
+      <Parent message={message} />
+    </div>
+  );
+};
+
+export default App;
+
+
+24Q.What are class components in React?
+ans. class components are defined using JavaScript classes. the render method in class components is responsible for returning JSX.
+
+25Q. What is the difference between class components and functional components?
+ans. 1. 
+
+26Q. What is Routing and Router in React?
+ans. The router allows you to create a single-page web application with navigation without the need for a full-page refresh. The router is a library of JavaScript that handles the routing and navigation based on the URL Link.
+
+27Q. What are the roles of Routes and Route components in React Routing?
+ans. The <Routes> components are used as the root container for declaring the collection of routes. The <route> components are used to define a route and specify the components that should render when the route matches.
+
+28Q. What are Route Parameters in Render Routing?
+ans. Route parameter in React Router is a way to pass the dynamic value to the URL path.
+   <Route path="/user/:userId" component={UserProfile} />
+
+29Q. What is the role of switch components in React Routing?
+ans. Switch components ensure that only the first matching <Route> is rendered and the rest are ignored.
+
+30Q. What is the role of exact prop in React Routing?
+ans. The exact prop is used with the <Route> components to match exactly the provided path.
+
+31Q. What are React Hooks?
+ans.React Hooks are inbuilt functions of the react library by using react hook, we perform many operations without rendering the whole single-page application. before using the react hook, we need to import from the react library.
+
+32Q. what is useState() hooks?
+ans. useState is used to manage the state. 
+useState working: useState accepts the initial value and returns an array of two values. first value contains the current state value and the second value is a function that is used to update the state.
+
+33Q. What is useEffect() hooks?
+ans. The "useEffect()" Hook in React is used to perform side effects in functional components. 
+
+34Q.What is Depenency Array in useEffect() hook?
+ans. The DepeDependencies array acts as Triggers for useEffect to rerun, which means if any dependencies values change, the code inside useEffect() will be executed again.
+
+35Q. What is the meaning of the empty array[] in useeffect().
+ans. An Empty array[] indicates that the effect function should only run once.
+
+36Q. what is the role of "useContext"() hool?
+ans. useContext in React provides a way to pass data from parent to child components without using props.useContext is used for storing data using crearteContext.
+
+37Q. What is createContext() method? What are Provider & Consumer Properties?
+ans. Provider or createContext() properties are properties that provide context value to all the child components.
+consumer properties or useContext() are used to consume the context value in the child components.
+
+38Q. When using the useContext() hook instead of props in real applications?
+ans. useContext is used to replace the props drilling properties in the react application and directly access the context value in any nested components.
+
+39Q. What are the components of Life Cycle Phases?
+ans.1 Mounting Phase=> This phase occurs when an instance of components is being created and inserted into the DOM.
+    2. Updating Phase=> This phase occurs when a component is being re-rendered as a result of changes, it may be its props or state.
+    3. Unmounting Phase=> This phase occurs when a component is being removed from the DOM.
+
+40Q. What is the role of the render method?
+ans. The render() method returns the react elements that will be rendered to the DOM.
+
+41Q. What are COntrolled COmponents in React?
+ans. A controlled component is a component whose input field or checked box is controlled by the state of the application. 
+
+42Q. what are the differences between controlled and uncontrolled components?
+ans. controlled component values are controlled by React states whereas uncontrolled component Values are not controlled by React state.
+controlled component event handlers update the React state whereas controlled component value can be directly accessed from the DOM.
+
+43Q. What are the characteristics of controlled components?
+ans. state control, Event Handling, state update, and re-rendering.
+
+44Q. What is Code splitting in React?
+ans. Code splitting is a technique to split the javascript bundle into a small part of the file according to the loaded on-demand.
+
+45Q. What is the role of lazy and suspense methods in reaction?
+ans. react lazy method is a function that allows to rendering of the page according to the needed.
+the suspense component is used to display a fallback UI while the lazily loaded component is being fetched.
+
+
+import React, { lazy, Suspense } from 'react';
+
+// Use lazy to dynamically import the component
+const LazyComponent = lazy(() => import('./LazyComponent'));
+
+const App = () => {
+  return (
+    <div>
+      <h1>Lazy and Suspense Example</h1>
+      
+      <Suspense fallback={<div>Loading...</div>}>
+        <LazyComponent />
+      </Suspense>
+    </div>
+  );
+};
+
+export default App;
+
+
+46Q. what are the props and Cons of code Splitting?
+ans. props of code splitting
+    1.=>faster initial load time.
+    2.=>Improved Caching.
+     Cons of code Splitting.
+    1.=>Complexity. 
+    2.=>increased Number of Requests.
+     
+
+47Q. What is the role of the import() function in code splitting?
+ans. import() function is used to import the react inbuild module to use in the react app.
+
+48Q. What is the purpose of the fallback prop in Suspense?
+ans. fallback is a placeholder or temporary content that users see while React is fetching and loading the actual content.
+
+49Q. What is a Higher-Order Components in React?
+ans. A Higher-Order Component is a components that take another component as an argument and adds extra features to another component.
+
+50Q. What is the use of React Profiler?
+ans. React Profiler is a set of tools in React that allows developers to profile the performance of a React application. 
+
+51Q. How can you Optimize Performance in React Application?
+ans. code splitting, react lazy, useMemo, etc. 
+
+52Q. Explain Reactive Programming with an example.
+ans. Reactive programming is a programming paradigm that focuses on reacting to changes and events in a declarative and asynchronous manner.Reactive programming is a programming paradigm that focuses on the propagation of changes and the automatic handling of those changes in the system. It is particularly well-suited for building applications that involve asynchronous and event-driven behavior.
