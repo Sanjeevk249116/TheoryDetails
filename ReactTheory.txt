@@ -60,6 +60,9 @@ ans. When we write two children elements then we need to rap into a parent div b
 
 20Q. what is Spread Operator?
 ans. The spread operator(...) is used to expand or spread an array or object.
+const arr1 = [1, 2, 3];
+const arr2 = [...arr1, 4, 5];
+// arr2 is now [1, 2, 3, 4, 5]
 
 
 const MyComponent = (props) => {
