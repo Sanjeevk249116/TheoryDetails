@@ -1,0 +1,241 @@
+1Q. What are the different data types present in javascript?
+ans. 1. Primitive types and Non-Primitive types.
+   1.Primitive types
+   a.String - It represents a series of characters and is written with quotes. A string can be represented 
+     using a single or a double quote.
+   b.BigInt - This data type is used to store numbers which are above the limitation of the Number data type. 
+     It can store large integers and is represented by adding “n” to an integer literal.
+   c.Boolean - It represents a logical entity and can have only two values : true or false. Booleans are 
+     generally used for conditional testing.
+   d.Undefined - When a variable is declared but not assigned, it has the value of undefined and it’s type is 
+     also undefined.
+   e.Null - It represents a non-existent or a invalid value.
+   f.Symbol - It is a new data type introduced in the ES6 version of javascript. It is used to store an 
+     anonymous and unique value.
+   2. Non-primitive types
+    a.Object, b.Function, c.Arrays
+
+2Q. Explain Hoisting in javascript.
+ans: Hoisting is the default behaviour of javascript where all the variable and function declarations are moved 
+     on top.
+
+3Q. Difference between “ == “ and “ === “ operators.
+ans. Both are comparison operators. The difference between both the operators is that “==” is used to compare values whereas, “ === “ is used to compare both values and types.
+
+4Q. Difference between var and let keyword in javascript.
+ans. The keyword 'Var' has a function scope. Anywhere in the function, the variable specified using var is accessible but in ‘let’ the scope of a variable declared with the 'let' keyword is limited to the block in which it is declared. Let's start with a Block Scope.
+
+5Q. Explain Implicit Type Coercion in javascript.
+ans. Implicit type coercion in javascript is the automatic conversion of value from one data type to another. It takes place when the operands of an expression are of different data types.
+
+6Q. What is NaN property in JavaScript?
+ans. NaN property represents the “Not-a-Number” value. It indicates a value that is not a legal number.
+
+7Q. Explain passed by value and passed by reference.
+ans. In JavaScript, primitive data types are passed by value and non-primitive data types are passed by reference.
+
+8Q. What is an Immediately Invoked Function in JavaScript?
+ans. (function(){ 
+  // Do something;
+})();
+
+9Q. Explain Higher Order Functions in javascript.
+ans. Functions that operate on other functions, either by taking them as arguments or by returning them, are called higher-order functions.
+
+10Q. Explain “this” keyword.
+ans. The “this” keyword refers to the object that the function is a property of.
+
+11Q. What do you mean by Self Invoking Functions?
+ans.Without being requested, a self-invoking expression is automatically invoked (initiated). If a function expression is followed by (), it will execute automatically. A function declaration cannot be invoked by itself.
+
+12Q. What is the difference between Call, Apply and Bind.
+ans. Call: The call() method invokes a function with a given this value and arguments provided one by one
+     var employee1 = { firstName: "John", lastName: "Rodson" };
+var employee2 = { firstName: "Jimmy", lastName: "Baily" };
+
+function invite(greeting1, greeting2) {
+  console.log(
+    greeting1 + " " + this.firstName + " " + this.lastName + ", " + greeting2
+  );
+}
+
+invite.call(employee1, "Hello", "How are you?"); // Hello John Rodson, How are you?
+invite.call(employee2, "Hello", "How are you?"); // Hello Jimmy Baily, How are you?
+
+Apply: Invokes the function with a given this value and allows you to pass in arguments as an array.
+var employee1 = { firstName: "John", lastName: "Rodson" };
+var employee2 = { firstName: "Jimmy", lastName: "Baily" };
+
+function invite(greeting1, greeting2) {
+  console.log(
+    greeting1 + " " + this.firstName + " " + this.lastName + ", " + greeting2
+  );
+}
+
+invite.apply(employee1, ["Hello", "How are you?"]); // Hello John Rodson, How are you?
+invite.apply(employee2, ["Hello", "How are you?"]); // Hello Jimmy Baily, How are you?
+
+Bind: returns a new function, allowing you to pass any number of arguments
+var employee1 = { firstName: "John", lastName: "Rodson" };
+var employee2 = { firstName: "Jimmy", lastName: "Baily" };
+
+function invite(greeting1, greeting2) {
+  console.log(
+    greeting1 + " " + this.firstName + " " + this.lastName + ", " + greeting2
+  );
+}
+
+var inviteEmployee1 = invite.bind(employee1);
+var inviteEmployee2 = invite.bind(employee2);
+inviteEmployee1("Hello", "How are you?"); // Hello John Rodson, How are you?
+inviteEmployee2("Hello", "How are you?"); // Hello Jimmy Baily, How are you?
+
+13Q.What is the purpose of the array slice method?
+ans.The slice() method returns the selected elements in an array as a new array object. It selects the elements starting at the given start argument, and ends at the given optional end argument without including the last element. If you omit the second argument then it selects till the end of the array.
+
+14Q What is the difference between slice and splice?
+ans.         Slice	                                             Splice
+Doesn't modify the original array(immutable)	Modifies the original array(mutable)
+Returns the subset of original array	Returns the deleted elements as array
+Used to pick the elements from array	Used to insert/delete elements to/from array
+
+15Q. What is memoization?
+ans. Memoization is a functional programming technique which attempts to increase a function’s performance by caching its previously computed results. Each time a memoized function is called, its parameters are used to index the cache. If the data is present, then it can be returned, without executing the entire function. Otherwise the function is executed and then the result is added to the cache. Let's take an example of adding function with memoization,
+
+16Q. What are closures?
+ans. A closure is the combination of a function and the lexical environment within which that function was declared. i.e, It is an inner function that has access to the outer or enclosing function’s variables.
+
+17Q.  Explain Scope and Scope Chain in javascript.
+ans.Scope in JS determines the accessibility of variables and functions at various parts of one’s code.
+
+18Q.What are callbacks?
+ans.Functions that are used as an argument to another function are called callback functions. 
+
+19Q. What is recursion in a programming language?
+ans. Recursion is a technique to iterate over an operation by having a function call itself repeatedly until it arrives at a result.
+
+20Q. What is the use of a constructor function in javascript?
+ans Constructor functions are used to create objects in javascript.
+function Person(name,age,gender){
+  this.name = name;
+  this.age = age;
+  this.gender = gender;
+}
+
+
+var person1 = new Person("Vivek", 76, "male");
+console.log(person1);
+
+var person2 = new Person("Courtney", 34, "female");
+console.log(person2);
+
+21Q. What is DOM?
+ans. DOM stands for Document Object Model.  DOM is a programming interface for HTML and XML documents.
+When the browser tries to render an HTML document, it creates an object based on the HTML document called DOM. Using this DOM, we can manipulate or change various elements inside the HTML document.
+
+22Q.What is the distinction between client-side and server-side JavaScript?
+ans. Client-side JavaScript is made up of two parts, a fundamental language and predefined objects for performing JavaScript in a browser. JavaScript for the client is automatically included in the HTML pages. At runtime, the browser understands this script.
+
+23Q. What are arrow functions?
+ans. Arrow functions were introduced in the ES6 version of javascript. They provide us with a new and shorter syntax for declaring functions. Arrow functions can only be used as a function expression.
+
+24Q. What is the rest parameter and spread operator?
+ans. Rest parameter ( … ):Using the rest parameter syntax, we can create functions that can take a variable number of arguments.
+Any number of arguments will be converted into an array using the rest parameter.
+
+function extractingArgs(...args){
+  return args[1];
+}
+
+// extractingArgs(8,9,1); // Returns 9
+
+function addAllArgs(...args){
+  let sumOfArgs = 0;
+  let i = 0;
+  while(i < args.length){
+    sumOfArgs += args[i];
+    i++;
+  }
+  return sumOfArgs;
+}
+
+addAllArgs(6, 5, 7, 99); // Returns 117
+addAllArgs(1, 3, 4); // Returns 8
+
+Spread operator (…): Although the syntax of the spread operator is exactly the same as the rest parameter, the spread operator is used to spreading an array, and object literals. We also use spread operators where one or more arguments are expected in a function call.
+
+function addFourNumbers(num1,num2,num3,num4){
+  return num1 + num2 + num3 + num4;
+}
+
+let fourNumbers = [5, 6, 7, 8];
+
+
+addFourNumbers(...fourNumbers);
+
+25Q. What is the use of promises in javascript?
+ans. Promises are used to handle asynchronous operations in javascript.
+
+26Q.What is the use of promises in javascript?
+ans. Promises are used to handle asynchronous operations in javascript.
+A promise is created using the Promise constructor which takes in a callback function with two parameters, resolve and reject respectively.
+
+resolve is a function that will be called when the async operation has been successfully completed.
+
+reject is a function that will be called, when the async operation fails or if some error occurs.
+Async-await functions are executed sequentially one after another.
+
+BASED ON THE OUTPUT
+
+26Q.
+function func1(){
+  setTimeout(()=>{
+    console.log(x);
+    console.log(y);
+  },3000);
+
+  var x = 2;
+  let y = 12;
+}
+func1();
+output: 2 , 12
+
+
+27Q.
+function func2(){
+  for(var i = 0; i < 3; i++){
+    setTimeout(()=> console.log(i),2000);
+}
+}
+func2();
+
+output: 3 3 3
+
+28Q.
+(function(){
+  setTimeout(()=> console.log(1),2000);
+  console.log(2);
+  setTimeout(()=> console.log(3),0);
+  console.log(4);
+})();
+
+output: 2 4 3 1
+
+29Q. 
+let x= {}, y = {name:"Ronny"},z = {name:"John"};
+x[y] = {name:"Vivek"};
+x[z] = {name:"Akki"};
+console.log(x[y]);
+output:Akki
+
+30Q. 
+function runFunc(){
+  console.log("1" + 1);
+  console.log("A" - 1);
+  console.log(2 + "-2" + "2");
+  console.log("Hello" - "World" + 78);
+  console.log("Hello"+ "78");
+}
+output:11 error 2-22 error hello78
+
+31Q

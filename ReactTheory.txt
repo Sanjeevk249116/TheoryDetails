@@ -188,7 +188,7 @@ ans.1 Mounting Phase=> This phase occurs when an instance of components is being
 40Q. What is the role of the render method?
 ans. The render() method returns the react elements that will be rendered to the DOM.
 
-41Q. What are COntrolled COmponents in React?
+41Q. What are Controlled Components in React?
 ans. A controlled component is a component whose input field or checked box is controlled by the state of the application. 
 
 42Q. what are the differences between controlled and uncontrolled components?
