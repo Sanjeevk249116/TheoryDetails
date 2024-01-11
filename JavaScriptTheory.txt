@@ -238,4 +238,46 @@ function runFunc(){
 }
 output:11 error 2-22 error hello78
 
-31Q
+31Q. 
+let a = 0;
+let b = false;
+console.log((a == b));
+console.log((a === b));
+
+output: true false
+
+32Q. var x = 23;
+
+(function(){
+  var x = 43;
+  (function random(){
+    x++;
+    console.log(x);
+    var x = 21;
+  })();
+})(); 
+
+output:NaN
+
+33Q. 
+const b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+for (let i = 0; i < 10; i++) {
+  setTimeout(() => console.log(b[i]), 1000);
+}
+output: 1 2 3 4 5 6 7 8 9 10
+
+34Q.const b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+ for (var i = 0; i < 10; i++) {
+  setTimeout(() => console.log(b[i]), 1000);
+}
+output:undefined
+undefined
+undefined
+undefined
+undefined
+undefined
+undefined
+undefined
+undefined
+undefined
