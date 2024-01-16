@@ -1,0 +1,25 @@
+1=> convert string in Array[]
+
+String[] arr=str.split(" ");
+
+
+2=> if check the number inside the String.
+
+str.contains("400").
+
+3=> convert character into number
+
+int number=str.charAt(i)-96;
+exp=> aba
+
+4=> print all substring
+
+str.substring(i,j);
+
+5=> for break the loop
+ System.exit(0);
+
+ 6=> convert a character integer into number
+  int num=str.charAt(i)-'0';
+
+  7=> 
