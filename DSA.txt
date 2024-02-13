@@ -22,4 +22,7 @@ str.substring(i,j);
  6=> convert a character integer into number
   int num=str.charAt(i)-'0';
 
-  7=> 
+  7=> COnvert integer to string
+   String str=Integer.toString(n);
+
+   

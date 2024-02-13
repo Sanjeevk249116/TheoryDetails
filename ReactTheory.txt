@@ -170,7 +170,7 @@ ans. The DepeDependencies array acts as Triggers for useEffect to rerun, which m
 35Q. What is the meaning of the empty array[] in useeffect().
 ans. An Empty array[] indicates that the effect function should only run once.
 
-36Q. what is the role of "useContext"() hool?
+36Q. what is the role of "useContext"() hook?
 ans. useContext in React provides a way to pass data from parent to child components without using props.useContext is used for storing data using crearteContext.
 
 37Q. What is createContext() method? What are Provider & Consumer Properties?
