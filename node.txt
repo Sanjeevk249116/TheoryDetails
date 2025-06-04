@@ -1,0 +1,53 @@
+1Q: what is node js?
+Ans: node js is a open source, cross platform javascript run time environment. the library to run web application outside the client browser. node js is use to create server side web application.
+
+2Q: Why use node.js?
+Ans: there are some advantage of using node js is
+a: it is generally fast.
+b: it is rarely block.
+c: it offer unified progamming language and data type
+d: it work on Chrome v5 engine which provide more stability
+e: every thing is asyncronous
+f: it yield great concurrency
+
+3Q: how node js work
+Ans: when client send a request to web server to interact the web application then that request are two types, first is blocking and second is non-blocking
+then node js retrive all incomming and add in a event queue 
+request are process one by one through event loop and it check that if request are simple and non-bloking and no need of external resource then it response send to event loop and event loop send the response to respective request.
+
+if request are blocking then again it add on thread pool and single thread from thread pool is assign to complex request and this thread is responsible to execute and complete the requst by external resource like large file, database etc 
+then after execution reponse again send to event loop and then it send to request client
+
+
+4Q: why node js is single-thread?
+Ans: node js is single-thread for async operations. by executing async operation on single-thread under various web load then it mode stable, more performance and scalable, and istead of creating new thread for each tasks, node js use single thread event loop to Handles multple task concurrently.
+
+5Q: If Node.js is single-threaded, then how does it handle concurrency?
+Ans: Node js is not follow the multple thread model like (java, .net) instead of it follow single thread event loop model. node js is heavily influenced by the JavaScript event drive model. it use call back funtion to handle asyncronous task. we say that event loop is heart of node js and through event loop node js handle multple task concurrency.
+
+
+6Q. What is call back in node.js
+Ans: Call back funtion is a funtion that take another funtion as argument is called call back funtion 
+that means funtion will execute when another funtion execution is completed and their response is input for first funtion.
+
+
+7Q:  What are the advantages of using promises instead of callbacks?
+Ans: a: to avoid call back hell
+     b: to provide more readability
+     c: easy to handle error
+
+8Q: How is Node.js most frequently used?? 
+Ans: real time chating, large data handling, file trasnfer, video steaming etc
+
+9Q: What is NPM?
+Ans: npm is stand for node package module which responsible to manage all package and module for node js
+
+
+10Q: What are the modules in Node.js?
+Ans: module in node.js is like to javascript library , modules in node is use to add some set of funtion and it use in node js by required() funtion with paranthparentheses and paranthparentheses contain node module name.
+http,fs,cors,url,stream
+
+11Q:What is the purpose of the module .Exports?
+Ans: in node js each file is treated as module so module.Exports is user to trasnfer file from one module to another and with help of module.exports, we can use single file at multiple place to increase readability of code.
+
+12Q: 

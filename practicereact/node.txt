@@ -1,0 +1,57 @@
+1Q. What is node.js?
+ans: Node js is oprn source, cross platform javascript run time environment. Node js is use to execute javascript code outside the client-browser, it is used to create web application is server side. node js is neither a language nor a framework.
+
+2Q. How node ia a runtime environment on server side? what is v8?
+ans: javaScript run in browser(client side) with the help of javascript engine(v8), similarly node js execute js code in outside browser with the help of javascript engine(v8)
+that means
+browser execute javascript on client side and node js execute javaScript on server side.
+v8 is a javascript engine to execute javaScript code.
+
+
+3Q. what is difference between runtime environment and framework?
+ans: runtime environment : runtime environment primary focus on provide the neccessary infrastruacture , including services like memory management and i/o operations.
+for express.js, node js provide environment for execute the expresss js code
+
+framework: primary focuses on simplifying the developement process by providing the npm module, inbuild feature,library etc.
+
+4Q. what is difference between node.js and express.js?
+ans: Node.js : node.js is a run-time environment that allow to execute javascript code on server side.
+     express.js: it is a framework and it simplifying the developement process by provide maany library and npm package. and also provide middleware, routing system etc
+
+5Q. what is difference between client side and server side?
+ans: 🔹 Client-Side
+Runs on: the user's browser (e.g., Chrome, Firefox).
+Languages used: HTML, CSS, JavaScript.
+Purpose: Handles what the user sees and interacts with directly.
+
+Examples:
+
+Animations or UI effects.
+Form validation before submitting.
+Displaying fetched data without refreshing the page (using JavaScript/AJAX).
+
+Pros:
+Fast response (no need to talk to the server).
+Reduces server load.
+
+Cons:
+Less secure (code is visible to the user).
+Can be affected by the user's device performance.
+
+🔹 Server-Side
+Runs on: the web server.
+Languages used: Node.js, Python, PHP, Ruby, Java, etc.
+Purpose: Handles logic, databases, authentication, and dynamic content generation.
+
+Examples:
+User login & authentication.
+Interacting with a database (e.g., MongoDB).
+Processing form data or payments.
+
+Pros:
+More secure (code and logic are hidden).
+Can connect to databases and perform heavy tasks.
+
+Cons:
+Slower response time (requires communication with the server).
+More server resource usage.
